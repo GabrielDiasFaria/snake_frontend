@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MultiPlayer Snake</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        #gameScreen {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('./assets/Grass.jpg');">
+    <section class="vh-100">
+        <div class="container h-100">
+
+            <div id="initialScreen" class="h-100" style="">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1 style="color: blanchedalmond;">Jogo da Cobrinha - Online</h1>
+                    <button type="submit" class="btn btn-primary" id="newGameButton">
+                        Criar Nova Sala
+                    </button>
+                    <p style="color: blanchedalmond;">Ou</p>
+                    </br></br>
+                    <div class="form-group">
+                        <input style="text-align: center; border-radius: 10px; border-color: blanchedalmond;"
+                            type="text" placeholder="Enter Game Code" id="gameCodeInput" />
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="joinGameButton">
+                        Entrar em uma Sala
+                    </button>
+                </div>
+            </div>
+
+            <div id="gameScreen" class="h-100">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1 style="color: blanchedalmond;">Sala Criada: <span id="gameCodeDisplay"></span></h1>
+                    <h3 style="color: blanchedalmond;"><span id="gamePointDisplay"></span></h3>
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
+    <script src="https://gdfsnake.herokuapp.com/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
